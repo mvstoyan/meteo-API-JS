@@ -1,17 +1,19 @@
 body {
-    background-image: url('https://images.unsplash.com/photo-1587923623987-c7e4083beb23?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHN1bnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60');
-    background-size: cover;
-    background-repeat: no-repeat;
     margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   #container {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    background-image: linear-gradient(rgba(233, 200, 200, 0.3), rgba(0, 0, 0, 0.6));
-    min-height: 100vh;
-    font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient(rgba(204, 201, 201, 0.751), rgba(72, 70, 70, 0.664));
+    margin: 20px;
+    width: 40%;
+    height: 80%;
+    font-family: 'Montserrat', sans-serif;
   }
   
   #header {
@@ -21,16 +23,14 @@ body {
   }
   
   #input {
-    background-color: rgba(142, 127, 161, 0.3);
+    background-color: rgba(142, 127, 161, 0.105);
     border-radius: 20px;
-    border: 3px solid #CDF3A2;
+    border: 3px solid #f4f6f2;
     padding: 15px;
     font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
   }
   
-  #input:focus {
-    background-color: #fff;
-  }
   
   #when-where {
     display: flex;
@@ -39,8 +39,8 @@ body {
   }
   
   #city {
-    color: #FFF;
-    font-size: 45px;
+    color: rgb(80, 4, 4);
+    font-size: 35px;
     font-weight: bold;
   }
   
@@ -57,10 +57,10 @@ body {
   
   
   #temperature {
-    color: #FFF;
-    font-size: 110px;
+    color: rgb(255, 255, 255);
+    font-size: 80px;
     font-weight: bold;
-    text-shadow: 5px 10px black;
+    text-shadow: 2px 5px rgb(72, 71, 71);
     margin: 0;
   }
   

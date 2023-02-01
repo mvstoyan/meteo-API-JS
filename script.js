@@ -3,6 +3,14 @@ const api = {
 endpoint: "https://api.openweathermap.org/data/2.5/",
 key: "042145cb758879d9a3765fc147b487d7"
     //api key
+};
+
+getApiGeolocation();
+
+async function getApiGeolocation() { 
+    const resGeolocation = await fetch(`https://ipgeolocation.abstractapi.com/v1/?api_key=dcc975202ace4c399b0f30a55f895904`);
+    const resultGeolocation = await resGeolocation.json(); 
+    getInfo(resultGeolocation.city);
 }
 
 const input = document.querySelector('#input');
@@ -19,27 +27,30 @@ function enter(e) {
 
 async function getInfo(data) {
     const res = await fetch(`${api.endpoint}weather?q=${data}&units=metric&appID=${api.key}`);
-    const result = await res.json();
-    displayResult(result);
+    const resReceived = await res.json();
+    displayResult(resReceived);
+    //clear input
+    input.value="";
 }
 
-function displayResult(result) {
+function displayResult(resReceived) {
+    document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" + resReceived.name + "')";
     let city = document.querySelector("#city");
-    city.textContent = `${result.name}, ${result.sys.country}`;
+    city.textContent = `${resReceived.name}, ${resReceived.sys.country}`;
 
     getOurDate();
 
     let temperature = document.querySelector("#temperature");
-    temperature.innerHTML = `${Math.round(result.main.temp)}<span>°</span>`;
+    temperature.innerHTML = `${Math.round(resReceived.main.temp)}<span>°</span>`;
 
     let feelsLike = document.querySelector("#feelsLike");
-    feelsLike.innerHTML = `Feels like: ${Math.round(result.main.feels_like)}<span>°</span>`;
+    feelsLike.innerHTML = `Feels like: ${Math.round(resReceived.main.feels_like)}<span>°</span>`;
 
     let conditions = document.querySelector("#conditions");
-    conditions.textContent = `${result.weather[0].main}`;
+    conditions.textContent = `${resReceived.weather[0].main}`;
 
     let variation = document.querySelector("#variation");
-    variation.innerHTML = "Min: " + `${Math.round(result.main.temp_min)}<span>°</span>` + " " + "Max " + `${Math.round(result.main.temp_max)}<span>°</span>`
+    variation.innerHTML = "Min: " + `${Math.round(resReceived.main.temp_min)}<span>°</span>` + " " + "Max " + `${Math.round(resReceived.main.temp_max)}<span>°</span>`
 }
 
 function getOurDate() {
