@@ -9,11 +9,13 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    background-image: linear-gradient(rgba(204, 201, 201, 0.751), rgba(72, 70, 70, 0.664));
+    background-image: linear-gradient(rgba(72, 70, 70, 0.664), rgba(219, 215, 214, 0.482));
+    box-shadow: 0px 5px 5px rgba(255,255,255, 0.37);
     margin: 20px;
     width: 40%;
     height: 80%;
     font-family: 'Montserrat', sans-serif;
+
   }
   
   #header {
@@ -39,7 +41,7 @@ body {
   }
   
   #city {
-    color: rgb(80, 4, 4);
+    color: #C55300;
     font-size: 35px;
     font-weight: bold;
   }
