@@ -2,18 +2,15 @@ body {
     margin: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
   }
   
   #container {
-    display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    align-self: center;
     background-image: linear-gradient(rgba(72, 70, 70, 0.664), rgba(219, 215, 214, 0.482));
     box-shadow: 0px 5px 5px rgba(255,255,255, 0.37);
     margin: 20px;
     width: 40%;
-    height: 80%;
     font-family: 'Montserrat', sans-serif;
 
   }
@@ -25,9 +22,9 @@ body {
   }
   
   #input {
-    background-color: rgba(142, 127, 161, 0.105);
+    background-color: #f4f6f2a7;
     border-radius: 20px;
-    border: 3px solid #f4f6f2;
+    border: 2px solid #C55300;
     padding: 15px;
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
@@ -84,4 +81,57 @@ body {
     font-size: 26px;
     font-weight: bold;
   }
+
+  @media all and (max-width: 1024px) {
+
+    body {
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 100vh;
+      padding: 0;
+      margin: 0;
+      background-position: center;
+      background-color: #f7f7f0;
+    }
+    
+    #container {
+      margin: 10px;
+      width: 90%;
   
+    }
+    
+    #header {
+      margin-top: 30px;
+    }
+    
+    #input {
+      padding: 10px;
+      font-size: 18px;
+    }
+    
+    #city {
+      font-size: 30px;
+    }
+    
+    #date {
+      font-size: 20px;
+    }
+    
+    #temperature {
+      font-size: 60px;
+    }
+    
+    #feelsLike {
+      font-size: 20px;
+    }
+    
+    #conditions {
+      font-size: 25px;
+    }
+    
+    #variation {
+      font-size: 20px;
+    }
+  }
+

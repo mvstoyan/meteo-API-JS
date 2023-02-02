@@ -1,5 +1,4 @@
 const api = {
-    //ссылка
 endpoint: "https://api.openweathermap.org/data/2.5/",
 key: "042145cb758879d9a3765fc147b487d7"
     //api key
