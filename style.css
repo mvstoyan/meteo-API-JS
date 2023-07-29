@@ -7,7 +7,7 @@ body {
   #container {
     flex-direction: column;
     align-self: center;
-    background-image: linear-gradient(rgba(72, 70, 70, 0.664), rgba(219, 215, 214, 0.482));
+    background-image: linear-gradient(rgba(255, 255, 255, 0.895), rgba(219, 215, 214, 0.804));
     box-shadow: 0px 5px 5px rgba(255,255,255, 0.37);
     margin: 20px;
     width: 40%;
@@ -22,7 +22,7 @@ body {
   }
   
   #input {
-    background-color: #f4f6f2a7;
+    background-color: rgba(255, 255, 255, 0.16);
     border-radius: 20px;
     border: 2px solid #C55300;
     padding: 15px;
@@ -44,7 +44,7 @@ body {
   }
   
   #date {
-    color: #FFF;
+    color: #191818;
     font-size: 24px;
   }
   
@@ -64,20 +64,20 @@ body {
   }
   
   #feelsLike {
-    color: #FFF;
+    color: #191818;
     font-size: 30px;
     font-weight: bold;
   }
   
   #conditions {
-    color: #FFF;
+    color: #191818;
     font-size: 32px;
     font-weight: bold;
     font-style: italic;
   }
   
   #variation {
-    color: #FFF;
+    color: #191818;
     font-size: 26px;
     font-weight: bold;
   }
