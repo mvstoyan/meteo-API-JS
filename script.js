@@ -1,22 +1,20 @@
+require('dotenv').config();
+
 const api = {
-endpoint: "https://api.openweathermap.org/data/2.5/",
-key: "042145cb758879d9a3765fc147b487d7"
-    //api key
+  endpoint: process.env.REACT_APP_WEATHER_API_ENDPOINT,
+  key: process.env.REACT_APP_WEATHER_API_KEY,
 };
 
 getApiGeolocation();
 
 async function getApiGeolocation() { 
-    const resGeolocation = await fetch(`https://ipgeolocation.abstractapi.com/v1/?api_key=dcc975202ace4c399b0f30a55f895904`);
+    const resGeolocation = await fetch(`${process.env.REACT_APP_GEO_API_ENDPOINT}?api_key=${process.env.REACT_APP_GEO_API_KEY}`);
     const resultGeolocation = await resGeolocation.json(); 
     getInfo(resultGeolocation.city);
 }
 
 const input = document.querySelector('#input');
 input.addEventListener("keypress", enter);
-
-// 1 - IF - 13/ENTER
-// 2 - SEARCH
 
 function enter(e) {
     if (e.keyCode === 13) {
@@ -28,7 +26,6 @@ async function getInfo(data) {
     const res = await fetch(`${api.endpoint}weather?q=${data}&units=metric&appID=${api.key}`);
     const resReceived = await res.json();
     displayResult(resReceived);
-    //clear input
     input.value="";
 }
 
